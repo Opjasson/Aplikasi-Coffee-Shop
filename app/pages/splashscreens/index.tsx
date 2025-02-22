@@ -1,12 +1,11 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Image, Text, View } from 'react-native'
+import { background } from "../../inventory/images"
 
 const index = () => {
   return (
     <View>
-        <Text>
-            Hallo world
-        </Text>
+        <Image source={background}/>
     </View>
   )
 }
