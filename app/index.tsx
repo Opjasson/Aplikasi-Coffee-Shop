@@ -1,15 +1,12 @@
+import { NavigationContainer } from "@react-navigation/native";
 import { Text, View } from "react-native";
+import { SplashScreen } from "./pages";
+import 'react-native-gesture-handler'
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <NavigationContainer>
+      <SplashScreen />
+    </NavigationContainer>
   );
 }
