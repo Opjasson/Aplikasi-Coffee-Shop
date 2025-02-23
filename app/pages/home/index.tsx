@@ -1,11 +1,27 @@
 import { coffe, photo } from "../../inventory/images";
-import { Location, Notification, Search, Filter, Cup } from "../../inventory/icons";
+import {
+    Location,
+    Notification,
+    Search,
+    Filter,
+    Cup,
+    Cup2,
+    Heart,
+    Add
+} from "../../inventory/icons";
 import React from "react";
-import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
+import {
+    Image,
+    ScrollView,
+    Text,
+    TextInput,
+    TouchableOpacity,
+    View,
+} from "react-native";
 
 const index = () => {
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, backgroundColor: "#FBFBFB" }}>
             {/* Top menu */}
             <View
                 style={{
@@ -67,26 +83,126 @@ const index = () => {
             </View>
             {/* End Search */}
 
-            <View>
-                <View>
-                    <Text>Category</Text>
+            {/* Categories */}
+            <View style={{ marginLeft: 25, marginTop: 15 }}>
+                <View style={{ marginBottom: 15 }}>
+                    <Text style={{ fontWeight: "500", marginLeft: 5 }}>
+                        Categories
+                    </Text>
                 </View>
-                <TouchableOpacity
-                    style={{
-                        justifyContent : 'center',
-                        flexDirection: "row",
-                        backgroundColor: "#2f823a",
-                        alignItems : 'center',
-                        paddingHorizontal : 15,
-                        paddingVertical : 15,
-                        borderRadius : 30,
-                        width : 140,
-                        gap : 5
-                    }}>
-                    <Image source={Cup} />
-                    <Text style={{ color : 'white' }}>Cappuchino</Text>
-                </TouchableOpacity>
+                <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}>
+                    {/* Menu */}
+                    <TouchableOpacity
+                        activeOpacity={0.8}
+                        style={{
+                            justifyContent: "center",
+                            flexDirection: "row",
+                            backgroundColor: "#2f823a",
+                            alignItems: "center",
+                            paddingHorizontal: 10,
+                            paddingVertical: 10,
+                            borderRadius: 30,
+                            gap: 5,
+                            marginRight: 10,
+                        }}>
+                        <Image source={Cup} />
+                        <Text style={{ color: "white" }}>Cappuchino</Text>
+                    </TouchableOpacity>
+
+                    {/* End Menu */}
+
+                    {/* Menu */}
+                    <TouchableOpacity
+                        activeOpacity={0.8}
+                        style={{
+                            justifyContent: "center",
+                            flexDirection: "row",
+                            boxShadow: "10",
+                            alignItems: "center",
+                            paddingHorizontal: 10,
+                            paddingVertical: 10,
+                            borderRadius: 30,
+                            gap: 5,
+                            marginRight: 10,
+                            elevation: 1,
+                            shadowColor: "black",
+                        }}>
+                        <Image source={Cup2} />
+                        <Text style={{ color: "black" }}>Arabbica</Text>
+                    </TouchableOpacity>
+                    {/* End menu */}
+
+                    {/* Menu */}
+                    <TouchableOpacity
+                        activeOpacity={0.8}
+                        style={{
+                            justifyContent: "center",
+                            flexDirection: "row",
+                            boxShadow: "10",
+                            alignItems: "center",
+                            paddingHorizontal: 10,
+                            paddingVertical: 10,
+                            borderRadius: 30,
+                            gap: 5,
+                            marginRight: 10,
+                            elevation: 1,
+                            shadowColor: "black",
+                        }}>
+                        <Image source={Cup2} />
+                        <Text style={{ color: "black" }}>Mochacino</Text>
+                    </TouchableOpacity>
+                    {/* End menu */}
+
+                    {/* Menu */}
+                    <TouchableOpacity
+                        activeOpacity={0.8}
+                        style={{
+                            justifyContent: "center",
+                            flexDirection: "row",
+                            boxShadow: "10",
+                            alignItems: "center",
+                            paddingHorizontal: 10,
+                            paddingVertical: 10,
+                            borderRadius: 30,
+                            gap: 5,
+                            marginRight: 10,
+                            elevation: 1,
+                            shadowColor: "black",
+                        }}>
+                        <Image source={Cup2} />
+                        <Text style={{ color: "black" }}>Espresso</Text>
+                    </TouchableOpacity>
+                    {/* End menu */}
+                </ScrollView>
             </View>
+            {/* End Categories */}
+
+            {/* Product */}
+            <ScrollView>
+                <View style={{ backgroundColor : 'white' }}>
+                    <Image
+                        source={coffe}
+                        style={{ width: 144, borderRadius: 20 }}
+                    />
+                    <View style={{ flexDirection : 'row' }}>
+                        <View>
+                            <Text>Cappuchino</Text>
+                            <Text>With Sugar</Text>
+                        </View>
+                        <View>
+                            <Image source={Heart} />
+                        </View>
+                    </View>
+
+                    <View>
+                        <Text>Rp50.000</Text>
+                        <Image source={Add} />
+                    </View>
+                </View>
+            </ScrollView>
+            {/* End Product */}
         </View>
     );
 };
