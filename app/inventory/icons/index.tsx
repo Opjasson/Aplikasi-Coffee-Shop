@@ -9,6 +9,7 @@ import Rate from "./star.png"
 import Cup from "./cup.png"
 import Cup2 from "./cup2.png"
 import Heart from "./heart.png"
+import HeartOff from "./line-heart.png"
 
 export {
     Location,
@@ -21,5 +22,6 @@ export {
     Rate,
     Cup,
     Cup2,
-    Heart
+    Heart,
+    HeartOff
 }
