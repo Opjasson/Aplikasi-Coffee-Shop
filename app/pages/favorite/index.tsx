@@ -234,6 +234,7 @@ const Favorite = () => {
                         </View>
                     </TouchableOpacity>
                 </View>
+                {/* Product */}
                 <View style={{ flexDirection: "row" }}>
                     <TouchableOpacity
                         activeOpacity={0.7}
